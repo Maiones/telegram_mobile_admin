@@ -97,7 +97,12 @@ def execute_script(message, script_name, ip_address):
 def execute_command(message):
     
     # Получаем команду из сообщения пользователя
-    command = message.text.split(' ', 1)[1]
+    command = message.text.split(' ', 1)
+    if len(command) < 2:
+        bot.reply_to(message, "Где аргументы?")
+        return
+    
+    command = command[1]
     
     # Исполняем команду в терминале
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
