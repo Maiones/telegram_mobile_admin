@@ -5,7 +5,12 @@ import paramiko
 import chardet
 import subprocess
 import datetime
+import requests
 
+# Устанавливаем тайм-аут чтения для requests на 60 секунд
+requests.adapters.DEFAULT_RETRIES = 5
+requests.adapters.SOCKET_TIMEOUT = 60
+requests.adapters.HTTP_ADAPTER_POOL_SIZE = 50
 
 # установка параметров подключения к Telegram API
 bot = telebot.TeleBot("BOT_TOKEN")

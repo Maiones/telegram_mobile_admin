@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram bot service
+After=multi-user.target
+ 
+[Service]
+User=user
+Type=simple
+Restart=always
+ExecStart=/home/user/kva-kva/scripts/python/run_bot.sh
+ 
+[Install]
+WantedBy=multi-user.target
