@@ -13,7 +13,7 @@ requests.adapters.SOCKET_TIMEOUT = 60
 requests.adapters.HTTP_ADAPTER_POOL_SIZE = 50
 
 # установка параметров подключения к Telegram API
-bot = telebot.TeleBot("BOT_TOKEN")
+bot = telebot.TeleBot("")
 
 # установка параметров подключения к удаленному серверу
 username = "root"
