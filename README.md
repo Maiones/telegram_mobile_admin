@@ -3,6 +3,7 @@ Telegram bot for interacting with terminal on linux and do some scripst witch yo
 
 **Activate script as service:**
 cp /etc/systemd/system/py_1.service
+systemctl enable --now py_1.service
 
 **Commands:**
 
